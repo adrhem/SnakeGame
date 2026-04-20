@@ -1,18 +1,20 @@
-//Adri·n M.
+//Adri√°n HM. <dev.foe555@slmail.me>
 #include <iostream>
 #include <fstream>
-#include <conio.h>
 #include <cstdlib>
-#include <windows.h>
 #include <ctime>
 #include <vector>
+#include "lib/conio_am.h" // https://sourceforge.net/projects/coniohcloneturboccpp/
+
 #define UP               72
 #define LEFT             75
 #define RIGHT            77
 #define DOWN             80
 #define ESC              27
 #define SELECT           8
+#ifndef ENTER
 #define ENTER            13
+#endif
 #define MOVE_UP          1
 #define MOVE_DOWN        2
 #define MOVE_RIGHT       3
@@ -32,7 +34,6 @@
 #define EXIT             5
 #define NAME_SIZE        20
 #define MAX_SCORES       5
-using namespace std;
 
 //Var Types
 typedef enum{EASY, MEDIUM, HARD, ASIATIC} Difficulty;
@@ -53,10 +54,9 @@ int score;
 int speed;
 Difficulty current_difficulty;
 char key;
-vector<Scores> high_scores;
+std::vector<Scores> high_scores;
 
 //Functions
-int gotoxy(SHORT x, SHORT y);
 void intro();
 void selectOption();
 void changeDifficulty();
@@ -86,7 +86,7 @@ int main(){
     do{
         selectOption();
         clearSnake();
-        system("cls");
+        clrscr();
         size_snake = INITIAL_SIZE + current_difficulty;
         n = 1;
         score = 0;
@@ -121,55 +121,39 @@ int main(){
                 break;
             }
 
-            Sleep(speed - current_difficulty);
+            delay((speed - current_difficulty));
         }
         if(key!=ESC)
-            cin.get();
+            std::cin.get();
         saveNewScore();
     }while(key!=ESC);
     saveScores();
     return 0;
 }
 
-int gotoxy(SHORT x, SHORT y){
-	COORD coord;
-	HANDLE h_stdout;
-
-	coord.X = x;
-	coord.Y = y;
-
-	if ((h_stdout = GetStdHandle(STD_OUTPUT_HANDLE)) == INVALID_HANDLE_VALUE)
-		return 0;
-
-	if (SetConsoleCursorPosition(h_stdout, coord) == 0)
-		return 0;
-
-	return 1;
-}
-
 
 void intro(){
-    system("cls");
-    cout << "________________________________________________________________________________" << endl;
-    cout << "                                                              -Snake Game- v2.0" << endl;
-    cout << "                    _    _" << endl;
-    cout << "                 ,-(|)--(|)-." << endl;
-    cout << "                 \\_   ..   _/" << endl;
-    cout << "                   \\______/" << endl;
-    cout << "                     V  V                                  ____" << endl;
-    cout << "                    `.^^`.                               /^,--`" << endl;
-    cout << "                     \\^^^\\                             (^^\\" << endl;
-    cout << "                     |^^^|                  _,-._       \\^^\\" << endl;
-    cout << "                    (^^^^\\      __      _,-'^^^^^`.    _,'^^)" << endl;
-    cout << "                     \\^^^^`._,-'^^`-._.'^^^^__^^^^ `--'^^^_/" << endl;
-    cout << "                      \\^^^^^ ^^^_^^^^^^^_,-'  `.^^^^^^^^_/ " << endl;
-    cout << "                       `.____,-' `-.__.'        `-.___.'   " << endl << endl << endl;
-    cout << "                                 Start" << endl;
-    cout << "                                 Difficulty" << endl;
-    cout << "                                 Scores" << endl;
-    cout << "                                 Credits" << endl;
-    cout << "                                 Exit" << endl << endl;
-    cout << "________________________________________________________________________________";
+    clrscr();
+    std::cout << "________________________________________________________________________________" << std::endl;
+    std::cout << "                                                              -Snake Game- v2.0" << std::endl;
+    std::cout << "                    _    _" << std::endl;
+    std::cout << "                 ,-(|)--(|)-." << std::endl;
+    std::cout << "                 \\_   ..   _/" << std::endl;
+    std::cout << "                   \\______/" << std::endl;
+    std::cout << "                     V  V                                  ____" << std::endl;
+    std::cout << "                    `.^^`.                               /^,--`" << std::endl;
+    std::cout << "                     \\^^^\\                             (^^\\" << std::endl;
+    std::cout << "                     |^^^|                  _,-._       \\^^\\" << std::endl;
+    std::cout << "                    (^^^^\\      __      _,-'^^^^^`.    _,'^^)" << std::endl;
+    std::cout << "                     \\^^^^`._,-'^^`-._.'^^^^__^^^^ `--'^^^_/" << std::endl;
+    std::cout << "                      \\^^^^^ ^^^_^^^^^^^_,-'  `.^^^^^^^^_/ " << std::endl;
+    std::cout << "                       `.____,-' `-.__.'        `-.___.'   " << std::endl << std::endl << std::endl;
+    std::cout << "                                 Start" << std::endl;
+    std::cout << "                                 Difficulty" << std::endl;
+    std::cout << "                                 Scores" << std::endl;
+    std::cout << "                                 Credits" << std::endl;
+    std::cout << "                                 Exit" << std::endl << std::endl;
+    std::cout << "________________________________________________________________________________";
 }
 
 void selectOption(){
@@ -180,14 +164,14 @@ void selectOption(){
         showDifficulty();
         option=1;
         exit = false;
-        gotoxy(32,17); cout << "-";
+        gotoxy(32,17); std::cout << "-";
         do
             if(kbhit()){
-                gotoxy(32,17); cout << " ";
-                gotoxy(32,18); cout << " ";
-                gotoxy(32,19); cout << " ";
-                gotoxy(32,20); cout << " ";
-                gotoxy(32,21); cout << " ";
+                gotoxy(32,17); std::cout << " ";
+                gotoxy(32,18); std::cout << " ";
+                gotoxy(32,19); std::cout << " ";
+                gotoxy(32,20); std::cout << " ";
+                gotoxy(32,21); std::cout << " ";
                 key = getch();
                 switch(key){
                     case ESC:
@@ -200,7 +184,7 @@ void selectOption(){
                         else
                             option=1;
                         gotoxy(32,16+option);
-                        cout << "-";
+                        std::cout << "-";
                     break;
                     case UP:
                         if(option>1)
@@ -208,7 +192,7 @@ void selectOption(){
                         else
                             option=5;
                         gotoxy(32,16+option);
-                        cout << "-";
+                        std::cout << "-";
                     break;
                     case ENTER:
                         exit = true;
@@ -239,27 +223,27 @@ void selectOption(){
 }
 
 void changeDifficulty(){
-    system("cls");
+    clrscr();
 
-    cout << endl << endl << endl << endl;
-    cout << "                               Select Difficulty:" << endl;
-    cout << "                                Easy" << endl;
-    cout << "                                Medium" << endl;
-    cout << "                                Hard" << endl;
-    cout << "                                Asiatic (not recommended)" << endl;
+    std::cout << std::endl << std::endl << std::endl << std::endl;
+    std::cout << "                               Select Difficulty:" << std::endl;
+    std::cout << "                                Easy" << std::endl;
+    std::cout << "                                Medium" << std::endl;
+    std::cout << "                                Hard" << std::endl;
+    std::cout << "                                Asiatic (not recommended)" << std::endl;
 
     int option;
     bool exit;
 
     option=1;
     exit = false;
-    gotoxy(30,5); cout << "-";
+    gotoxy(30,5); std::cout << "-";
     do
         if(kbhit()){
-            gotoxy(30,5); cout << " ";
-            gotoxy(30,6); cout << " ";
-            gotoxy(30,7); cout << " ";
-            gotoxy(30,8); cout << " ";
+            gotoxy(30,5); std::cout << " ";
+            gotoxy(30,6); std::cout << " ";
+            gotoxy(30,7); std::cout << " ";
+            gotoxy(30,8); std::cout << " ";
             key = getch();
             switch(key){
                 case ESC:
@@ -272,7 +256,7 @@ void changeDifficulty(){
                     else
                         option=1;
                     gotoxy(30,4+option);
-                    cout << "-";
+                    std::cout << "-";
                 break;
                 case UP:
                     if(option>1)
@@ -280,7 +264,7 @@ void changeDifficulty(){
                     else
                         option=4;
                     gotoxy(30,4+option);
-                    cout << "-";
+                    std::cout << "-";
                 break;
                 case ENTER:
                     exit = true;
@@ -314,33 +298,33 @@ void showDifficulty(){
 
     const char* difficulties[] = {"Easy","Medium","Hard","Asiatic"};
 
-    gotoxy(60,24);cout << "Difficulty: " << difficulties[current_difficulty];
+    gotoxy(60,24);std::cout << "Difficulty: " << difficulties[current_difficulty];
 }
 
 void showCredits(){
-    system("cls");
-    gotoxy(45,21); cout << "Made by: Adri\240n M\202ndez";
+    clrscr();
+    gotoxy(45,21); std::cout << "Made by: Adri\240n M\202ndez";
 
-    cin.get();
+    std::cin.get();
 }
 
 void drawFrame(){
     int i;
 
     for(i=LIMIT_MEN_X;i<LIMIT_SUP_X;i++){
-        gotoxy(i,3); cout << (char)205;
-        gotoxy(i,23); cout << (char)205;
+        gotoxy(i,3); std::cout << (char)205;
+        gotoxy(i,23); std::cout << (char)205;
     }
 
     for(i=LIMIT_MEN_Y;i<LIMIT_SUP_Y;i++){
-        gotoxy(2,i); cout << (char)186;
-        gotoxy(77,i); cout << (char)186;
+        gotoxy(2,i); std::cout << (char)186;
+        gotoxy(77,i); std::cout << (char)186;
     }
 
-    gotoxy(2,3); cout << (char)201;
-    gotoxy(2,23); cout << (char)200;
-    gotoxy(77,3); cout << (char)187;
-    gotoxy(77,23); cout << (char)188;
+    gotoxy(2,3); std::cout << (char)201;
+    gotoxy(2,23); std::cout << (char)200;
+    gotoxy(77,3); std::cout << (char)187;
+    gotoxy(77,23); std::cout << (char)188;
 }
 
 void clearSnake(){
@@ -354,7 +338,7 @@ void clearSnake(){
 
 void eraseBody(){
     gotoxy(body[n][0],body[n][1]);
-    cout << " ";
+    std::cout << " ";
 }
 
 void savePositions(){
@@ -368,12 +352,12 @@ void savePositions(){
 
 void drawBody(){
     int i;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+    textcolor(10);
     for(i=1;i<size_snake;i++){
         gotoxy(body[i][0],body[i][1]);
-        cout << (char)254;
+        std::cout << (char)254;
     }
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+    textcolor(7);
 }
 
 void keyPress(){
@@ -417,8 +401,9 @@ void printFood(){
     int color;
     color = rand()%6+9;
     gotoxy(x_food,y_food);
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);cout << (char)219;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+    textcolor(color);
+    std::cout << (char)219;
+    textcolor(7);
 }
 
 bool hasEaten(){
@@ -468,7 +453,11 @@ bool hasEaten(){
             score += increment+30;
             speed = speed_difficulty - current_difficulty*4;
         }
-        Beep(1000,100);
+        #if (defined _WIN32 || defined _WIN64)
+        beep(1000,100);
+        #else
+        std::cout << "\a";
+        #endif
         return true;
     }
     else
@@ -477,7 +466,7 @@ bool hasEaten(){
 
 void putScore(){
     gotoxy(0,0);
-    cout << "Score: " << score;
+    std::cout << "Score: " << score;
 }
 
 bool gameOver(){
@@ -485,14 +474,14 @@ bool gameOver(){
 
     if(x == LIMIT_MEN_X || x == LIMIT_SUP_X || y == LIMIT_MEN_Y || y == LIMIT_SUP_Y){
         gotoxy(35,10);
-        cout << "Game Over!" << endl;
+        std::cout << "Game Over!" << std::endl;
         return true;
     }
 
     for(i=size_snake-1;i>0;i--)
         if(body[i][0] == x && body[i][1] == y){
             gotoxy(35,10);
-            cout << "Game Over!" << endl;
+            std::cout << "Game Over!" << std::endl;
             return true;
         }
     return false;
@@ -501,7 +490,7 @@ bool gameOver(){
 
 void loadScores(){
     int i;
-    ifstream load("Scores.txt");
+    std::ifstream load("Scores.txt");
     high_scores.resize(MAX_SCORES);
     if(load.good())
         for(i=0;i<MAX_SCORES;i++)
@@ -517,21 +506,21 @@ void loadScores(){
 }
 
 void showScores(){
-    system("cls");
+    clrscr();
     int i, pos=1;
-    gotoxy(0,0);cout << "________________________________________________________________________________";
-    gotoxy(32,pos-1);cout << "High Scores";
+    gotoxy(0,0);std::cout << "________________________________________________________________________________";
+    gotoxy(32,pos-1);std::cout << "High Scores";
     i = 0;
     while((unsigned)i<MAX_SCORES){
         i++;
         pos++;
-        gotoxy(23,pos);cout << i << ". " << high_scores[i-1].name ;
-        gotoxy(47,pos);cout << high_scores[i-1].high_score;
+        gotoxy(23,pos);std::cout << i << ". " << high_scores[i-1].name ;
+        gotoxy(47,pos);std::cout << high_scores[i-1].high_score;
 
 
     }
 
-    cin.get();
+    std::cin.get();
 }
 
 void saveNewScore(){
@@ -549,9 +538,9 @@ void saveNewScore(){
             high_scores[j]=high_scores[j-1];
             j--;
         }
-        gotoxy(20,20);cout << "New high score!";
-        gotoxy(20,21);cout << "Input your name: ";
-                      cin.getline(high_scores[i].name,NAME_SIZE);
+        gotoxy(20,20);std::cout << "New high score!";
+        gotoxy(20,21);std::cout << "Input your name: ";
+                      std::cin.getline(high_scores[i].name,NAME_SIZE);
         high_scores[i].high_score=score;
     }
 
@@ -559,7 +548,7 @@ void saveNewScore(){
 
 void saveScores(){
     int i;
-    ofstream save("Scores.txt");
+    std::ofstream save("Scores.txt");
     for(i=0;i<MAX_SCORES;i++)
         save.write((char*)&high_scores[i],sizeof(Scores));
 }
