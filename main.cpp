@@ -136,7 +136,7 @@ int main(){
 void intro(){
     clrscr();
     std::cout << "________________________________________________________________________________" << std::endl;
-    std::cout << "                                                              -Snake Game- v2.0" << std::endl;
+    std::cout << "                                                              -Snake Game- v3.0" << std::endl;
     std::cout << "                    _    _" << std::endl;
     std::cout << "                 ,-(|)--(|)-." << std::endl;
     std::cout << "                 \\_   ..   _/" << std::endl;
@@ -304,7 +304,7 @@ void showDifficulty(){
 
 void showCredits(){
     clrscr();
-    gotoxy(45,21); std::cout << "Made by: Adrián HM <dev.foe555@slmail.me>";
+    gotoxy(10,21); std::cout << "Made by: Adrián HM <dev.foe555@slmail.me>";
 
     std::cin.get();
 }
