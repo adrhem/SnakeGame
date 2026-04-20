@@ -343,7 +343,7 @@
   // * Author review......: Victor Carlquist                             * //
   // * Review date  ......: 2017.03.13                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -354,7 +354,7 @@
     #if defined _WIN32 || defined _WIN64
       Sleep(MILISSEGUNDOS);
     #else
-      sleep(MILISSEGUNDOS / 1000);
+      usleep((useconds_t)MILISSEGUNDOS * 1000);
     #endif
     return;
   }
@@ -363,10 +363,10 @@
   // *                                                                   * //
   // * Function ..........: gcurs()                                      * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2021.05.17                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -402,7 +402,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -452,10 +452,10 @@
   // *                                                                   * //
   // * Function ..........: ltoav()                                      * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2021.05.14                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -508,7 +508,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -535,16 +535,16 @@
   // *                                                                   * //
   // * Function ..........: cgets()                                      * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2021.05.14                                   * //
   // * Version review.....: 1.3                                          * //
   // * Author review......: Victor Carlquist                             * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.19                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -591,7 +591,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -619,10 +619,10 @@
   // *                                                                   * //
   // * Function ..........: clrscr()                                     * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.14                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -649,10 +649,10 @@
   // *                                                                   * //
   // * Function ..........: cprintf()                                    * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.19                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.17                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -683,19 +683,19 @@
   // *                                                                   * //
   // * Function ..........: cputs()                                      * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2021.05.14                                   * //
   // * Version review.....: 3.1                                          * //
   // * Author review......: Rodrigo Messias da Silva                     * //
   // * Review date  ......: 2017.06.14                                   * //
   // * Version review.....: 3.0                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.25                                   * //
   // * Version review.....: 2.0                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.15                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.14                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -734,16 +734,16 @@
   // *                                                                   * //
   // * Function ..........: cscanf()                                     * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2018.06.21                                   * //
   // * Version review.....: 1.3                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.25                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.19                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.17                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -774,7 +774,7 @@
   // *                                                                   * //
   // * Function ..........: delline()                                    * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2021.05.24                                   * //
   // * Version review.....: 1.1 (adapted)                                * //
   // * Author ............: Demidov Andrey                               * //
@@ -852,10 +852,10 @@
   // * Author review......: Victor Carlquist                             * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.19                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -880,8 +880,29 @@
       tcgetattr(STDIN_FILENO, &ESCRITA);
       TECLADO = ESCRITA;
       TECLADO.c_lflag &= ~(ICANON | ECHO);
+      TECLADO.c_cc[VMIN]  = 1;
+      TECLADO.c_cc[VTIME] = 0;
       tcsetattr(STDIN_FILENO, TCSANOW, &TECLADO);
       CARACTERE = getchar();
+      if (CARACTERE == 27) {
+        // Arrow keys send ESC [ A/B/C/D ˜ peek ahead with a short timeout
+        TECLADO.c_cc[VMIN]  = 0;
+        TECLADO.c_cc[VTIME] = 1; // 100 ms timeout
+        tcsetattr(STDIN_FILENO, TCSANOW, &TECLADO);
+        int SEQ1 = getchar();
+        if (SEQ1 == '[') {
+          int SEQ2 = getchar();
+          tcsetattr(STDIN_FILENO, TCSANOW, &ESCRITA);
+          switch (SEQ2) {
+            case 'A': return (char)72; // UP
+            case 'B': return (char)80; // DOWN
+            case 'C': return (char)77; // RIGHT
+            case 'D': return (char)75; // LEFT
+          }
+        } else if (SEQ1 != EOF && SEQ1 != -1) {
+          ungetc(SEQ1, stdin);
+        }
+      }
       tcsetattr(STDIN_FILENO, TCSANOW, &ESCRITA);
       return (char)CARACTERE;
     #endif
@@ -894,10 +915,10 @@
   // * Author review......: Victor Carlquist                             * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.19                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -934,13 +955,13 @@
   // *                                                                   * //
   // * Function ..........: getpass()                                    * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2021.05.14                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.19                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -985,10 +1006,10 @@
   // *                                                                   * //
   // * Function ..........: gotoxy()                                     * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1031,7 +1052,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1055,7 +1076,7 @@
   // *                                                                   * //
   // * Function ..........: insline()                                    * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2021.05.24                                   * //
   // * Version review.....: 1.1 (adapted)                                * //
   // * Author ............: Demidov Andrey                               * //
@@ -1133,7 +1154,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1141,18 +1162,39 @@
 
   int kbhit(void)
   {
-    char CARACTERE;
-    do
-      {
-        CARACTERE = getch();
-        if (CARACTERE != EOF)
-          {
-            ungetc(CARACTERE, stdin);
-            return 1;
-          }
-      }
-    while (true);
-    return 0;
+    #if defined _WIN32 || defined _WIN64
+      char CARACTERE;
+      do
+        {
+          CARACTERE = getch();
+          if (CARACTERE != EOF)
+            {
+              ungetc(CARACTERE, stdin);
+              return 1;
+            }
+        }
+      while (true);
+      return 0;
+    #else
+      termios ESCRITA, TECLADO;
+      int CARACTERE;
+      int TECLA;
+      tcgetattr(STDIN_FILENO, &ESCRITA);
+      TECLADO = ESCRITA;
+      TECLADO.c_lflag &= ~(ICANON | ECHO);
+      tcsetattr(STDIN_FILENO, TCSANOW, &TECLADO);
+      TECLA = fcntl(STDIN_FILENO, F_GETFL, 0);
+      fcntl(STDIN_FILENO, F_SETFL, TECLA | O_NONBLOCK);
+      CARACTERE = getchar();
+      tcsetattr(STDIN_FILENO, TCSANOW, &ESCRITA);
+      fcntl(STDIN_FILENO, F_SETFL, TECLA);
+      if (CARACTERE != EOF && CARACTERE != -1)
+        {
+          ungetc(CARACTERE, stdin);
+          return 1;
+        }
+      return 0;
+    #endif
   }
 
   // ********************************************************************* //
@@ -1162,7 +1204,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1189,7 +1231,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1213,16 +1255,16 @@
   // *                                                                   * //
   // * Function ..........: putch()                                      * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2018.06.18                                   * //
   // * Version review.....: 1.3                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.19                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.13                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1255,7 +1297,7 @@
   // * Author review......: Lucas Ventura Moura Alves                    * //
   // * Review date  ......: 2018.06.21                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.15                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1290,10 +1332,10 @@
   // *                                                                   * //
   // * Function ..........: textattr()                                   * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.15                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1310,13 +1352,13 @@
   // *                                                                   * //
   // * Function ..........: textbackground()                             * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.13                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1360,13 +1402,13 @@
   // *                                                                   * //
   // * Function ..........: textcolor()                                  * //
   // *                                                                   * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 1.1                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1421,13 +1463,13 @@
   // * Author review......: Victor Carlquist                             * //
   // * Review date  ......: 2017.03.22                                   * //
   // * Version review.....: 2.2                                          * //
-  // * Author review......: José Augusto N. G. Manzano                   * //
+  // * Author review......: Jos˜ Augusto N. G. Manzano                   * //
   // * Review date  ......: 2017.03.21                                   * //
   // * Version review.....: 2.1                                          * //
   // * Author review......: Victor Carlquist                             * //
   // * Review date  ......: 2017.03.18                                   * //
   // * Version review.....: 2.0                                          * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.16                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1456,7 +1498,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1476,7 +1518,7 @@
   // * Author review......:                                              * //
   // * Review date  ......:                                              * //
   // * Version review.....:                                              * //
-  // * Author ............: José Augusto N. G. Manzano                   * //
+  // * Author ............: Jos˜ Augusto N. G. Manzano                   * //
   // * Date ..............: 2017.03.11                                   * //
   // * Version ...........: 1.0                                          * //
   // *                                                                   * //
@@ -1493,16 +1535,16 @@
 
 // ********************************************************************* //
 // *                                                                   * //
-// * trecho com texto somente em português.                            * //
-// * parte con el texto solamente en portugués.                        * //
+// * trecho com texto somente em portugu˜s.                            * //
+// * parte con el texto solamente en portugu˜s.                        * //
 // * part with text only in portuguese.                                * //
 // *                                                                   * //
 // ********************************************************************* //
 
 // Funcionalidade: delay()
 //
-// OBS: O cálculo do interválo de tempo percorrido pode ser reali-
-//      zado com o trecho de código a seguir com auxílio da bibli-
+// OBS: O c˜lculo do interv˜lo de tempo percorrido pode ser reali-
+//      zado com o trecho de c˜digo a seguir com aux˜lio da bibli-
 //      teca "ctime" para uso do tipo "clock_t" tanto no GCC para
 //      Windows como POSIX:
 /*
@@ -1511,28 +1553,28 @@
         while (TEMPO > clock());
 */
 //      A "winapi" (exclusiva S.O. Windows) permite realizar a
-//      a ação de contagem de tempo com auxílio da bibliteca
-//      "windows.h" para a função "GetTickCount()" com o trecho
-//      de código seguinte:
+//      a a˜˜o de contagem de tempo com aux˜lio da bibliteca
+//      "windows.h" para a fun˜˜o "GetTickCount()" com o trecho
+//      de c˜digo seguinte:
 /*
         unsigned TEMPO = GetTickCount();
         while ((GetTickCount() - TEMPO) < (unsigned) MILISSEGUNDOS);
 */
-//      Os laços acima podem ser utilizados de maneira didática ou em
-//      sistemas operacionais que não tenham suporte a função "sleep",
-//      porque o laço deixa a CPU ocupada e desperdiça energia elé-
-//      trica. Já a função "sleep" deixa o processo "dormindo" (não
+//      Os la˜os acima podem ser utilizados de maneira did˜tica ou em
+//      sistemas operacionais que n˜o tenham suporte a fun˜˜o "sleep",
+//      porque o la˜o deixa a CPU ocupada e desperdi˜a energia el˜-
+//      trica. J˜ a fun˜˜o "sleep" deixa o processo "dormindo" (n˜o
 //      sendo executado pela CPU), permitindo que o sistema escalone
 //      outros processos em seu lugar (Victor Carlquist).
 
 
 // Funcionalidade: kbhit()
 //
-// OBS: função aguardando desenvolvimento de rotina para sistema
-//      operacional Window. No POSIX função OK, testada com exito
-//      ainda não implementada.
+// OBS: fun˜˜o aguardando desenvolvimento de rotina para sistema
+//      operacional Window. No POSIX fun˜˜o OK, testada com exito
+//      ainda n˜o implementada.
 //
-//      Segue código funcional POSIX (não implementado). Esta ação
+//      Segue c˜digo funcional POSIX (n˜o implementado). Esta a˜˜o
 //      esta definida na funcionalidade "getc()".
 /*
         int kbhit(void)
@@ -1560,8 +1602,8 @@
 
 // Funcionalidade: ungetch()
 //
-// OBS: Apresentada nova versão. Mantida a versão 1.0 como
-//      referência de estudo. Segue cóodigo:
+// OBS: Apresentada nova vers˜o. Mantida a vers˜o 1.0 como
+//      refer˜ncia de estudo. Segue c˜odigo:
 /*
         int ungetch(char TECLA)
         {
@@ -1575,8 +1617,8 @@
             }
         }
 */
-//      A versão 2.0 da funcionalidade corresponde ao
-//      código:
+//      A vers˜o 2.0 da funcionalidade corresponde ao
+//      c˜digo:
 /*
         int ungetch(char TECLA)
         { // TECLADO = buffer
@@ -1585,9 +1627,9 @@
           return 0;
         }
 */
-//      A operação da funcionalidade ungetch pode
-//      ser conseguida com o código adaptado de
-//      K&R (simulação da ação):
+//      A opera˜˜o da funcionalidade ungetch pode
+//      ser conseguida com o c˜digo adaptado de
+//      K&R (simula˜˜o da a˜˜o):
 /*
         int ungetch(char CARACTERE)
         {
@@ -1606,21 +1648,21 @@
 
 // Funcionalidade: cputs()
 //
-// OBS: Apresentada em 03 de maio de 2017 versão funcional da
-//      funcionalidade identificando a ação do código de contro-
+// OBS: Apresentada em 03 de maio de 2017 vers˜o funcional da
+//      funcionalidade identificando a a˜˜o do c˜digo de contro-
 //      le "\n" de forma adequada. Por conseguinte a funcionali-
 //      dade "cprintf" que se utiliza de cputs passou a operar
 //      corretamente.
 //
-// Nos compiladores Borland/Enbarcadero C++ a função "cputs" quando
-// identifica o uso do código "\t" apresenta no seu local o caractere
-// ASCII 248 existente exclusivamente para computadores padrão IBM PC
-// no modo console (MS-DOS). A versão apresentada nesta biblioteca no
-// local onde há a presennça do código "\n" não apresenta nada apenas
-// desconsiderando a existência do código.
+// Nos compiladores Borland/Enbarcadero C++ a fun˜˜o "cputs" quando
+// identifica o uso do c˜digo "\t" apresenta no seu local o caractere
+// ASCII 248 existente exclusivamente para computadores padr˜o IBM PC
+// no modo console (MS-DOS). A vers˜o apresentada nesta biblioteca no
+// local onde h˜ a presenn˜a do c˜digo "\n" n˜o apresenta nada apenas
+// desconsiderando a exist˜ncia do c˜digo.
 //
-// O programador Victor apresentou um código alternativo muito interes-
-// sante que pode ser usado em substituição ao código "cputs" incorpo-
+// O programador Victor apresentou um c˜digo alternativo muito interes-
+// sante que pode ser usado em substitui˜˜o ao c˜digo "cputs" incorpo-
 // rado nesta biblioteca.
 //
 /*  int cputs(const char *CADEIA)

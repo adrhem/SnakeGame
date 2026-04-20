@@ -80,6 +80,7 @@ void saveScores();
 
 
 int main(){
+    setvbuf(stdout, NULL, _IONBF, 0); // flush every write immediately
     srand(time(NULL));
     current_difficulty = MEDIUM;
     loadScores();
@@ -303,7 +304,7 @@ void showDifficulty(){
 
 void showCredits(){
     clrscr();
-    gotoxy(45,21); std::cout << "Made by: Adri\240n M\202ndez";
+    gotoxy(45,21); std::cout << "Made by: Adrián HM <dev.foe555@slmail.me>";
 
     std::cin.get();
 }
@@ -312,19 +313,19 @@ void drawFrame(){
     int i;
 
     for(i=LIMIT_MEN_X;i<LIMIT_SUP_X;i++){
-        gotoxy(i,3); std::cout << (char)205;
-        gotoxy(i,23); std::cout << (char)205;
+        gotoxy(i,3); std::cout << "═";
+        gotoxy(i,23); std::cout << "═";
     }
 
     for(i=LIMIT_MEN_Y;i<LIMIT_SUP_Y;i++){
-        gotoxy(2,i); std::cout << (char)186;
-        gotoxy(77,i); std::cout << (char)186;
+        gotoxy(2,i); std::cout << "║";
+        gotoxy(77,i); std::cout << "║";
     }
 
-    gotoxy(2,3); std::cout << (char)201;
-    gotoxy(2,23); std::cout << (char)200;
-    gotoxy(77,3); std::cout << (char)187;
-    gotoxy(77,23); std::cout << (char)188;
+    gotoxy(2,3); std::cout << "╔";
+    gotoxy(2,23); std::cout << "╚";
+    gotoxy(77,3); std::cout << "╗";
+    gotoxy(77,23); std::cout << "╝";
 }
 
 void clearSnake(){
@@ -355,7 +356,7 @@ void drawBody(){
     textcolor(10);
     for(i=1;i<size_snake;i++){
         gotoxy(body[i][0],body[i][1]);
-        std::cout << (char)254;
+        std::cout << "■";
     }
     textcolor(7);
 }
@@ -402,7 +403,7 @@ void printFood(){
     color = rand()%6+9;
     gotoxy(x_food,y_food);
     textcolor(color);
-    std::cout << (char)219;
+    std::cout << "●";
     textcolor(7);
 }
 
@@ -465,7 +466,7 @@ bool hasEaten(){
 }
 
 void putScore(){
-    gotoxy(0,0);
+    gotoxy(1,1);
     std::cout << "Score: " << score;
 }
 
