@@ -2,7 +2,7 @@
 
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra
-LDFLAGS = -lstdc++
+LDFLAGS =
 
 SOURCES = main.cpp
 OBJECTS = $(SOURCES:.cpp=.o)

@@ -665,7 +665,7 @@
     int CARACTERES;
     VIDEO = (char*)malloc(1024);
     va_start(ARGUMENTOS, FORMATO);
-    CARACTERES = vsprintf(VIDEO, FORMATO, ARGUMENTOS);
+    CARACTERES = vsnprintf(VIDEO, 1024, FORMATO, ARGUMENTOS);
     cputs(VIDEO);
     va_end(ARGUMENTOS);
     free(VIDEO);
